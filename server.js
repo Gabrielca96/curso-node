@@ -4,9 +4,13 @@ const express = require('express');
 //Permite trabajar con body de la petición
 const bodyParser = require('body-parser');
 
+const db = require('./db')
+
 //Traigo rutas
 //Importo routes
 const router = require('./network/routes');
+
+db('mongodb://127.0.0.1:27017/first_bd')
 
 var app = express();
 app.use(bodyParser.json());
