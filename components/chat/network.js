@@ -1,14 +1,17 @@
 //importo express
 const express = require('express')
-//importo response
-const response = require('../../network/response');
-//importo controlador
-const controller = require('./controller');
 
+
+
+const response = require('../../network/response');
+const controller = require('./controller');
 //Se usa para separar peticiones
 const router = express.Router();
 
-router.post('/', function (req, res){
+
+
+
+router.post('/',function (req, res){
     controller.addChat(req.body.users)
     .then(data => {
         response.success(req, res, data, 201)

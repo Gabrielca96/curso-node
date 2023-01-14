@@ -12,6 +12,7 @@ const router = require('./network/routes');
 
 db('mongodb://127.0.0.1:27017/first_bd')
 
+//Levanto servidor web
 var app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
